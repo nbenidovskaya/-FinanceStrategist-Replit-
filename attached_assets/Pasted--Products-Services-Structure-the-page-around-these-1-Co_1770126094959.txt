@@ -1,0 +1,25 @@
+**Products/Services (Structure the page around these):**
+1.  **Consulting (Project Work):** Due Diligence, financial function optimization, M&A strategy, crisis management.
+2.  **Mentoring (Individual & Group):** "Path to CFO" coaching, financial literacy for non-financial leaders, career transition programs.
+3.  **Retainer (Independent Advisory):** Monthly strategic partnership, participation in board meetings, regular financial health audits.
+
+**Mandatory Page Sections:**
+1.  **Hero Section:** Strong headline, sub-headline, high-quality professional portrait photo, clear Call-to-Action (e.g., "Schedule a Strategy Session").
+2.  **For Whom Section:** Visually distinct blocks for the three personas ("Maxim", "Natalia", "Sergei") with their key problem and the offered solution.
+3.  **Services/Products Section:** Detailed, benefit-oriented description of the three product lines (Consulting, Mentoring, Retainer).
+4.  **My Method / Philosophy Section:** Explain the approach based on strategy, data, and personalized support. Use icons or short statements.
+5.  **About Me / Credentials:** Brief bio highlighting 15+ years experience, EMBA, ACCA/FCCA, work with major companies. Convey reliability and expertise.
+6.  **Contact & Call-to-Action:** A clear contact form linked to a CRM/email, phone number, and link to Telegram/WhatsApp.
+
+**Visual & Stylistic Requirements:**
+- **Color Palette:** Professional blues (trust, stability), accent greens (growth), possibly deep red for important CTAs. Avoid being too corporate or cold.
+- **Typography:** Clean, modern, highly readable sans-serif fonts.
+- **Imagery:** Generate or use high-quality, professional stock photos that convey leadership, strategy, data analysis, and confident teamwork. No cliché "handshake" photos. The overall look should be serious, premium, and empathetic.
+- **Tone:** Authoritative yet approachable. Confident but not arrogant. The language should respect the client's intelligence ("no канцелярит").
+
+**Functionality:**
+- Fully responsive design for mobile and desktop.
+- Smooth scrolling navigation.
+- A functional contact form placeholder.
+
+Generate the complete HTML, CSS, and JavaScript code for this landing page.
