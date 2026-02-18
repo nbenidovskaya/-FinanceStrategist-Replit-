@@ -10,30 +10,30 @@ export function About() {
 
           <div className="relative z-10 grid md:grid-cols-[2fr,1fr] gap-12">
             <div>
-              <h2 className="text-3xl font-serif font-bold mb-6">About Me</h2>
+              <h2 className="text-3xl font-serif font-bold mb-6">Обо мне</h2>
               <p className="text-lg text-white/90 leading-relaxed mb-6">
-                I am an independent CFO and Strategic Finance Mentor with over 15 years of experience in high-stakes environments. 
-                Having served as CFO for companies with up to <span className="text-secondary font-bold">50+ billion RUB turnover</span>, 
-                I've navigated complex mergers, crises, and growth phases.
+                Я — независимый CFO и стратегический ментор с более чем 15-летним опытом работы. 
+                В роли финансового директора я управлял финансами компаний с <span className="text-secondary font-bold">оборотом более 50 млрд рублей</span>, 
+                сопровождал сделки M&A, преодолевал кризисы и фазы взрывного роста.
               </p>
               <p className="text-white/80 leading-relaxed mb-8">
-                My mission is to democratize high-level financial strategy. I believe that every leader deserves 
-                the clarity and confidence that comes from mastering their numbers. Whether you are a CEO, 
-                a rising finance director, or transitioning into the field, I provide the roadmap.
+                Моя миссия — сделать высокоуровневую финансовую стратегию доступной. Я верю, что каждый лидер заслуживает 
+                ясности и уверенности, которые дает владение цифрами. Будь вы CEO, будущий финансовый директор 
+                или профессионал в процессе карьерного перехода — я помогу построить маршрут.
               </p>
               
               <div className="grid grid-cols-2 gap-6">
                 <div className="flex items-center gap-3">
                   <Building2 className="w-5 h-5 text-secondary" />
-                  <span className="text-sm font-medium">Major Corporate Experience</span>
+                  <span className="text-sm font-medium">Опыт в крупных корпорациях</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <GraduationCap className="w-5 h-5 text-secondary" />
-                  <span className="text-sm font-medium">EMBA & ACCA/FCCA</span>
+                  <span className="text-sm font-medium">EMBA и ACCA/FCCA</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <BadgeCheck className="w-5 h-5 text-secondary" />
-                  <span className="text-sm font-medium">Strategic Partner</span>
+                  <span className="text-sm font-medium">Стратегический партнер</span>
                 </div>
               </div>
             </div>
@@ -41,15 +41,15 @@ export function About() {
             <div className="flex flex-col justify-center gap-4 border-l border-white/10 pl-8 md:pl-12">
               <div className="text-center md:text-left">
                 <p className="text-4xl font-bold text-secondary mb-1">15+</p>
-                <p className="text-xs uppercase tracking-wider text-white/60">Years Experience</p>
+                <p className="text-xs uppercase tracking-wider text-white/60">Лет опыта</p>
               </div>
               <div className="text-center md:text-left">
-                <p className="text-4xl font-bold text-secondary mb-1">50B+</p>
-                <p className="text-xs uppercase tracking-wider text-white/60">RUB Turnover Managed</p>
+                <p className="text-4xl font-bold text-secondary mb-1">50М+</p>
+                <p className="text-xs uppercase tracking-wider text-white/60">Управляемый оборот (млрд руб)</p>
               </div>
               <div className="text-center md:text-left">
                 <p className="text-4xl font-bold text-secondary mb-1">100%</p>
-                <p className="text-xs uppercase tracking-wider text-white/60">Tangible Results</p>
+                <p className="text-xs uppercase tracking-wider text-white/60">Реальные результаты</p>
               </div>
             </div>
           </div>

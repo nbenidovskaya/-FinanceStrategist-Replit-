@@ -11,8 +11,8 @@ export function Footer() {
               Finance<span className="text-secondary">Strategist</span>
             </a>
             <p className="max-w-xs text-sm leading-relaxed mb-6">
-              Transforming finance from a back-office function into a strategic growth engine. 
-              Independent advisory for forward-thinking leaders.
+              Трансформация финансов из бэк-офисной функции в двигатель стратегического роста. 
+              Независимое консультирование для прогрессивных лидеров.
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-secondary hover:text-white transition-colors">
@@ -28,28 +28,28 @@ export function Footer() {
           </div>
           
           <div>
-            <h4 className="text-white font-bold mb-6">Services</h4>
+            <h4 className="text-white font-bold mb-6">Услуги</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link to="services" smooth={true} className="hover:text-secondary cursor-pointer">Strategic Consulting</Link></li>
-              <li><Link to="services" smooth={true} className="hover:text-secondary cursor-pointer">CFO Mentoring</Link></li>
-              <li><Link to="services" smooth={true} className="hover:text-secondary cursor-pointer">Independent Advisory</Link></li>
-              <li><Link to="services" smooth={true} className="hover:text-secondary cursor-pointer">Crisis Management</Link></li>
+              <li><Link to="services" smooth={true} className="hover:text-secondary cursor-pointer">Стратегический консалтинг</Link></li>
+              <li><Link to="services" smooth={true} className="hover:text-secondary cursor-pointer">Менторство для CFO</Link></li>
+              <li><Link to="services" smooth={true} className="hover:text-secondary cursor-pointer">Независимый советник</Link></li>
+              <li><Link to="services" smooth={true} className="hover:text-secondary cursor-pointer">Кризис-менеджмент</Link></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-white font-bold mb-6">Company</h4>
+            <h4 className="text-white font-bold mb-6">Компания</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link to="about" smooth={true} className="hover:text-secondary cursor-pointer">About Me</Link></li>
-              <li><Link to="method" smooth={true} className="hover:text-secondary cursor-pointer">Methodology</Link></li>
-              <li><Link to="contact" smooth={true} className="hover:text-secondary cursor-pointer">Contact</Link></li>
-              <li><a href="#" className="hover:text-secondary">Privacy Policy</a></li>
+              <li><Link to="about" smooth={true} className="hover:text-secondary cursor-pointer">Обо мне</Link></li>
+              <li><Link to="method" smooth={true} className="hover:text-secondary cursor-pointer">Методология</Link></li>
+              <li><Link to="contact" smooth={true} className="hover:text-secondary cursor-pointer">Контакты</Link></li>
+              <li><a href="#" className="hover:text-secondary">Политика конфиденциальности</a></li>
             </ul>
           </div>
         </div>
         
         <div className="pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
-          <p>&copy; {new Date().getFullYear()} Finance Strategist. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Finance Strategist. Все права защищены.</p>
         </div>
       </div>
     </footer>

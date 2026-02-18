@@ -17,10 +17,10 @@ export function Navigation() {
   }, []);
 
   const navLinks = [
-    { name: "Services", to: "services" },
-    { name: "Methodology", to: "method" },
-    { name: "About", to: "about" },
-    { name: "Contact", to: "contact" },
+    { name: "Услуги", to: "services" },
+    { name: "Методология", to: "method" },
+    { name: "Обо мне", to: "about" },
+    { name: "Контакты", to: "contact" },
   ];
 
   return (
@@ -52,7 +52,7 @@ export function Navigation() {
           ))}
           <Link to="contact" smooth={true} duration={500}>
             <Button variant="default" className="bg-primary hover:bg-primary/90 text-white rounded-full px-6">
-              Book Consultation
+              Записаться на консультацию
             </Button>
           </Link>
         </div>

@@ -25,14 +25,14 @@ export function useSubmitContact() {
     },
     onSuccess: () => {
       toast({
-        title: "Request Received",
-        description: "I will review your inquiry and get back to you shortly.",
+        title: "Заявка получена",
+        description: "Я ознакомлюсь с вашим запросом и свяжусь с вами в ближайшее время.",
         variant: "default",
       });
     },
     onError: (error: Error) => {
       toast({
-        title: "Submission Failed",
+        title: "Ошибка отправки",
         description: error.message,
         variant: "destructive",
       });

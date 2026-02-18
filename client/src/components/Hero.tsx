@@ -16,27 +16,27 @@ export function Hero() {
           className="space-y-6"
         >
           <div className="inline-block px-4 py-1.5 rounded-full bg-primary/5 border border-primary/10 text-primary text-sm font-semibold tracking-wide">
-            Independent CFO & Strategic Mentor
+            Независимый CFO и стратегический ментор
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-primary">
-            Your Strategic Partner in Finance. <br />
-            <span className="text-secondary italic font-serif">From Operational Numbers to Strategic Growth.</span>
+            Ваш стратегический партнер в финансах. <br />
+            <span className="text-secondary italic font-serif">От операционных цифр к стратегическому росту.</span>
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
-            15+ years as a CFO in companies with up to 50+ billion RUB turnover. I help leaders gain control, influence, and confidence through financial expertise.
+            15+ лет опыта в роли CFO в компаниях с оборотом до 50+ млрд рублей. Помогаю лидерам обрести контроль, влияние и уверенность через финансовую экспертизу.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <Link to="contact" smooth={true} duration={500}>
               <Button size="lg" className="bg-accent hover:bg-accent/90 text-white rounded-full px-8 h-14 text-lg w-full sm:w-auto shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
-                Schedule Strategy Session
+                Записаться на стратегическую сессию
               </Button>
             </Link>
             <Link to="about" smooth={true} duration={500}>
               <Button variant="outline" size="lg" className="rounded-full px-8 h-14 text-lg w-full sm:w-auto border-primary/20 hover:bg-primary/5">
-                Learn More <ArrowRight className="ml-2 w-4 h-4" />
+                Узнать больше <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </Link>
           </div>
@@ -59,8 +59,8 @@ export function Hero() {
             
             <div className="absolute bottom-8 left-8 right-8 text-white">
               <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20">
-                <p className="font-serif italic text-lg mb-2">"Complexity Simplified."</p>
-                <p className="text-sm opacity-80">We talk about difficult things in plain language, with respect for your intellect.</p>
+                <p className="font-serif italic text-lg mb-2">"Сложное — просто."</p>
+                <p className="text-sm opacity-80">Говорим о сложных вещах понятным языком, с уважением к вашему интеллекту.</p>
               </div>
             </div>
           </div>

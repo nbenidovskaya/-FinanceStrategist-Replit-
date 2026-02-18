@@ -48,9 +48,9 @@ export function ContactForm() {
     <section id="contact" className="section-padding bg-slate-50">
       <div className="container-width max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary font-serif mb-4">Let's Start the Conversation</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary font-serif mb-4">Начнем диалог</h2>
           <p className="text-muted-foreground text-lg">
-            Schedule a strategy session to discuss your financial goals.
+            Запишитесь на стратегическую сессию, чтобы обсудить ваши финансовые цели.
           </p>
         </div>
 
@@ -63,9 +63,9 @@ export function ContactForm() {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Full Name</FormLabel>
+                      <FormLabel>Полное имя</FormLabel>
                       <FormControl>
-                        <Input placeholder="Maxim Ivanov" className="h-12 bg-slate-50" {...field} />
+                        <Input placeholder="Максим Иванов" className="h-12 bg-slate-50" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -77,7 +77,7 @@ export function ContactForm() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email Address</FormLabel>
+                      <FormLabel>Email</FormLabel>
                       <FormControl>
                         <Input placeholder="maxim@company.com" className="h-12 bg-slate-50" {...field} />
                       </FormControl>
@@ -93,7 +93,7 @@ export function ContactForm() {
                   name="phone"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Phone (Optional)</FormLabel>
+                      <FormLabel>Телефон (необязательно)</FormLabel>
                       <FormControl>
                         <Input placeholder="+7 (999) 000-00-00" className="h-12 bg-slate-50" {...field} value={field.value || ''} />
                       </FormControl>
@@ -107,18 +107,18 @@ export function ContactForm() {
                   name="persona"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>I identify as...</FormLabel>
+                      <FormLabel>Кто вы?</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value || "other"}>
                         <FormControl>
                           <SelectTrigger className="h-12 bg-slate-50">
-                            <SelectValue placeholder="Select your role" />
+                            <SelectValue placeholder="Выберите вашу роль" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="Maxim">Business Owner / CEO</SelectItem>
-                          <SelectItem value="Natalia">CFO / Finance Director</SelectItem>
-                          <SelectItem value="Sergei">Career Transitioner</SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
+                          <SelectItem value="Maxim">Владелец бизнеса / CEO</SelectItem>
+                          <SelectItem value="Natalia">CFO / Фин. директор</SelectItem>
+                          <SelectItem value="Sergei">Карьерный переход</SelectItem>
+                          <SelectItem value="other">Другое</SelectItem>
                         </SelectContent>
                       </Select>
                       <FormMessage />
@@ -132,10 +132,10 @@ export function ContactForm() {
                 name="message"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>How can I help you?</FormLabel>
+                    <FormLabel>Чем я могу вам помочь?</FormLabel>
                     <FormControl>
                       <Textarea 
-                        placeholder="Tell me about your current challenges..." 
+                        placeholder="Расскажите о ваших текущих вызовах..." 
                         className="min-h-[150px] bg-slate-50 resize-none p-4" 
                         {...field} 
                       />
@@ -153,10 +153,10 @@ export function ContactForm() {
               >
                 {mutation.isPending ? (
                   <>
-                    <Loader2 className="mr-2 h-5 w-5 animate-spin" /> Sending...
+                    <Loader2 className="mr-2 h-5 w-5 animate-spin" /> Отправка...
                   </>
                 ) : (
-                  "Request Strategy Session"
+                  "Запросить стратегическую сессию"
                 )}
               </Button>
             </form>

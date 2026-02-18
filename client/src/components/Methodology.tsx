@@ -8,11 +8,11 @@ export function Methodology() {
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
             <h2 className="text-3xl md:text-4xl font-bold text-primary font-serif">
-              My Philosophy
+              Моя философия
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Finance isn't just about spreadsheets; it's the language of business strategy. 
-              My approach bridges the gap between complex data and clear decision-making.
+              Финансы — это не просто таблицы, это язык бизнес-стратегии. 
+              Мой подход устраняет разрыв между сложными данными и четким принятием решений.
             </p>
 
             <div className="space-y-6">
@@ -21,9 +21,9 @@ export function Methodology() {
                   <Layers className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">Complexity Simplified</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Сложное — просто</h3>
                   <p className="text-muted-foreground">
-                    We talk about difficult things in plain language, respecting your intellect without hiding behind jargon.
+                    Говорим о сложных вещах понятным языком, уважая ваш интеллект и не скрываясь за терминами.
                   </p>
                 </div>
               </div>
@@ -33,9 +33,9 @@ export function Methodology() {
                   <Target className="w-6 h-6 text-accent" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">Tangible Results</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Ощутимые результаты</h3>
                   <p className="text-muted-foreground">
-                    Every engagement is designed for a measurable outcome. No steps in vain. We focus on ROI and value creation.
+                    Каждое взаимодействие направлено на измеримый результат. Никаких пустых шагов. Фокус на ROI и создании ценности.
                   </p>
                 </div>
               </div>
@@ -45,9 +45,9 @@ export function Methodology() {
                   <LineChart className="w-6 h-6 text-secondary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">Data-Driven Strategy</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Стратегия на основе данных</h3>
                   <p className="text-muted-foreground">
-                    Decisions based on facts, not feelings. We build systems that provide clarity and foresight.
+                    Решения на базе фактов, а не интуиции. Мы строим системы, которые обеспечивают ясность и предсказуемость.
                   </p>
                 </div>
               </div>
@@ -70,7 +70,7 @@ export function Methodology() {
             </div>
             <div className="absolute -bottom-6 -left-6 bg-white p-8 rounded-xl shadow-xl border border-slate-100 max-w-xs hidden md:block">
               <p className="font-serif text-2xl font-bold text-primary mb-2">15+</p>
-              <p className="text-sm text-muted-foreground uppercase tracking-wide">Years of Executive Financial Leadership</p>
+              <p className="text-sm text-muted-foreground uppercase tracking-wide">Лет управленческого опыта в финансах</p>
             </div>
           </motion.div>
         </div>

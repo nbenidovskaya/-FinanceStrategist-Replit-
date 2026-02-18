@@ -4,29 +4,29 @@ import { User, Briefcase, TrendingUp } from "lucide-react";
 const personas = [
   {
     id: "maxim",
-    name: "Maxim",
-    role: "The Strategic Leader (Owner/CEO)",
+    name: "Максим",
+    role: "Стратегический лидер (Владелец/CEO)",
     icon: <TrendingUp className="w-8 h-8 text-white" />,
-    problem: "Needs to link finance with strategy, fears losing control.",
-    goal: "Wants to increase business value and scale confidently.",
+    problem: "Нужно связать финансы со стратегией, боится потери контроля.",
+    goal: "Хочет увеличить стоимость бизнеса и уверенно масштабироваться.",
     color: "bg-primary",
   },
   {
     id: "natalia",
-    name: "Natalia",
-    role: "The Finance Transformer (CFO)",
+    name: "Наталья",
+    role: "Трансформатор финансов (CFO)",
     icon: <Briefcase className="w-8 h-8 text-white" />,
-    problem: "Stuck in operational tasks, lacks strategic voice.",
-    goal: "Wants to transform finance function and become a strategic partner.",
+    problem: "Погрязла в операционке, не хватает стратегического веса.",
+    goal: "Хочет трансформировать финансовую функцию и стать стратегическим партнером.",
     color: "bg-secondary",
   },
   {
     id: "sergei",
-    name: "Sergei",
-    role: "The Career Transitioner",
+    name: "Сергей",
+    role: "Карьерный переход",
     icon: <User className="w-8 h-8 text-white" />,
-    problem: "Experienced professional transitioning from another field.",
-    goal: "Aims to master corporate finance without losing past experience.",
+    problem: "Опытный профессионал, переходящий из другой области.",
+    goal: "Стремится освоить корпоративные финансы, не теряя прошлый опыт.",
     color: "bg-slate-600",
   },
 ];
@@ -36,9 +36,9 @@ export function Personas() {
     <section className="section-padding bg-white">
       <div className="container-width">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">Who I Work With</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">С кем я работаю</h2>
           <p className="text-muted-foreground text-lg">
-            Specialized guidance for leaders at different stages of their financial journey.
+            Специализированная поддержка для лидеров на разных этапах их финансового пути.
           </p>
         </div>
 
@@ -61,11 +61,11 @@ export function Personas() {
               
               <div className="space-y-4">
                 <div>
-                  <p className="text-xs font-bold text-muted-foreground mb-1 uppercase">The Challenge</p>
+                  <p className="text-xs font-bold text-muted-foreground mb-1 uppercase">Вызов</p>
                   <p className="text-foreground/80 leading-relaxed">{persona.problem}</p>
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-muted-foreground mb-1 uppercase">The Goal</p>
+                  <p className="text-xs font-bold text-muted-foreground mb-1 uppercase">Цель</p>
                   <p className="text-foreground/80 leading-relaxed font-medium">{persona.goal}</p>
                 </div>
               </div>
