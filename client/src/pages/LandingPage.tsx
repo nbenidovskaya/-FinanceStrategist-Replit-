@@ -2,6 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { Personas } from "@/components/Personas";
 import { Services } from "@/components/Services";
+import { Cases } from "@/components/Cases";
 import { Methodology } from "@/components/Methodology";
 import { About } from "@/components/About";
 import { ContactForm } from "@/components/ContactForm";
@@ -13,10 +14,11 @@ export default function LandingPage() {
       <Navigation />
       <main>
         <Hero />
-        <Personas />
         <Services />
         <Methodology />
         <About />
+        <Cases />
+        <Personas />
         <ContactForm />
       </main>
       <Footer />

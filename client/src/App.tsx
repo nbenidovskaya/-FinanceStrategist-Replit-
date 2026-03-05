@@ -1,4 +1,5 @@
 import { Switch, Route } from "wouter";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -9,6 +10,7 @@ import LandingPage from "@/pages/LandingPage";
 function Router() {
   return (
     <Switch>
+      <Route path="/privacy" component={PrivacyPolicy} />
       <Route path="/" component={LandingPage} />
       <Route component={NotFound} />
     </Switch>
