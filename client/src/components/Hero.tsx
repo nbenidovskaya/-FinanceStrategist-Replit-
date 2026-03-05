@@ -94,8 +94,8 @@ export function Hero() {
 
             {/* Quote overlay */}
             <div className="absolute bottom-8 left-6 right-6">
-              <div className="p-5 rounded-xl border backdrop-blur-md"
-                style={{ background: "rgba(10,22,40,0.6)", borderColor: "rgba(201,169,110,0.3)" }}>
+              <div className="p-5"
+                style={{ borderLeft: "2px solid #C9A96E", paddingLeft: "16px", background: "none", border: "none" }}>
                 <p className="italic text-base" style={{ color: "#C9A96E", fontFamily: "'Playfair Display', serif" }}>
                   "Финансовый директор должен быть там, где принимаются решения — а не там, где они объясняются."
                 </p>
