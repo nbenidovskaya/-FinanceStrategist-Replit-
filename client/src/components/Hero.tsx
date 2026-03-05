@@ -31,22 +31,21 @@ export function Hero() {
             Независимый CFO и стратегический ментор
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"
             style={{ color: "#0A1628", fontFamily: "'Playfair Display', serif" }}>
-            Ваш стратегический партнёр в финансах.{" "}
+            Финансы, которые работают на стратегию — а не против неё.{" "}
             <span className="italic" style={{ color: "#C9A96E" }}>
-              От операционных цифр к стратегическому росту.
+              Опыт CFO изнутри. Взгляд советника снаружи.
             </span>
           </h1>
 
           <p className="text-lg md:text-xl leading-relaxed max-w-xl" style={{ color: "#4A4A5A" }}>
-            15+ лет опыта в роли CFO в компаниях с оборотом до 50+ млрд рублей.
-            Помогаю лидерам обрести контроль, влияние и уверенность через финансовую экспертизу.
+            15+ лет опыта в роли CFO в международных и российских компаниях с оборотом до 50+ млрд рублей. Помогаю лидерам принимать финансовые решения с уверенностью.
           </p>
 
           {/* Credential badges */}
           <div className="flex flex-wrap gap-3">
-            {["EMBA РАНХиГС / Kingston", "ACCA · FCCA", "IMA"].map((cred) => (
+            {["EMBA РАНХиГС / Kingston", "ACCA"].map((cred) => (
               <span key={cred} className="px-3 py-1 text-xs font-semibold rounded-full border"
                 style={{ borderColor: "#C9A96E", color: "#0A1628", background: "rgba(201,169,110,0.08)" }}>
                 {cred}
@@ -97,11 +96,8 @@ export function Hero() {
             <div className="absolute bottom-8 left-6 right-6">
               <div className="p-5 rounded-xl border backdrop-blur-md"
                 style={{ background: "rgba(10,22,40,0.6)", borderColor: "rgba(201,169,110,0.3)" }}>
-                <p className="italic text-base mb-1" style={{ color: "#C9A96E", fontFamily: "'Playfair Display', serif" }}>
-                  "Сложное — просто."
-                </p>
-                <p className="text-xs" style={{ color: "rgba(250,248,245,0.75)" }}>
-                  Говорим о сложных вещах понятным языком, с уважением к вашему интеллекту.
+                <p className="italic text-base" style={{ color: "#C9A96E", fontFamily: "'Playfair Display', serif" }}>
+                  "Финансовый директор должен быть там, где принимаются решения — а не там, где они объясняются."
                 </p>
               </div>
             </div>
