@@ -48,9 +48,9 @@ export function ContactForm() {
     <section id="contact" className="section-padding bg-slate-50">
       <div className="container-width max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary font-serif mb-4">Начнем диалог</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary font-serif mb-4">Начнём разговор</h2>
           <p className="text-muted-foreground text-lg">
-            Запишитесь на стратегическую сессию, чтобы обсудить ваши финансовые цели.
+            Напишите — и мы найдём удобное время для вводной сессии.
           </p>
         </div>
 
@@ -65,7 +65,7 @@ export function ContactForm() {
                     <FormItem>
                       <FormLabel>Полное имя</FormLabel>
                       <FormControl>
-                        <Input placeholder="Максим Иванов" className="h-12 bg-slate-50" {...field} />
+                        <Input placeholder="Ваше имя" className="h-12 bg-slate-50" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -79,7 +79,7 @@ export function ContactForm() {
                     <FormItem>
                       <FormLabel>Email</FormLabel>
                       <FormControl>
-                        <Input placeholder="maxim@company.com" className="h-12 bg-slate-50" {...field} />
+                        <Input placeholder="email@company.com" className="h-12 bg-slate-50" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -115,9 +115,9 @@ export function ContactForm() {
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="Maxim">Владелец бизнеса / CEO</SelectItem>
-                          <SelectItem value="Natalia">CFO / Фин. директор</SelectItem>
-                          <SelectItem value="Sergei">Карьерный переход</SelectItem>
+                          <SelectItem value="ceo">Владелец бизнеса / CEO</SelectItem>
+                          <SelectItem value="cfo">CFO / Фин. директор / Контроллер / Эксперт</SelectItem>
+                          <SelectItem value="transition">Карьерный переход</SelectItem>
                           <SelectItem value="other">Другое</SelectItem>
                         </SelectContent>
                       </Select>
@@ -132,10 +132,10 @@ export function ContactForm() {
                 name="message"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Чем я могу вам помочь?</FormLabel>
+                    <FormLabel>Опишите вашу задачу</FormLabel>
                     <FormControl>
                       <Textarea 
-                        placeholder="Расскажите о ваших текущих вызовах..." 
+                        placeholder="Расскажите о ситуации — что сейчас не работает или что хотите изменить..." 
                         className="min-h-[150px] bg-slate-50 resize-none p-4" 
                         {...field} 
                       />
@@ -156,7 +156,7 @@ export function ContactForm() {
                     <Loader2 className="mr-2 h-5 w-5 animate-spin" /> Отправка...
                   </>
                 ) : (
-                  "Запросить стратегическую сессию"
+                  "Отправить заявку"
                 )}
               </Button>
             </form>

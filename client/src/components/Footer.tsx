@@ -13,8 +13,7 @@ export function Footer() {
               Finance<span style={{ color: "#C9A96E" }}>Strategist</span>
             </a>
             <p className="text-sm leading-relaxed mb-6 max-w-xs" style={{ color: "rgba(250,248,245,0.55)" }}>
-              Трансформация финансов из бэк-офисной функции в двигатель стратегического роста.
-              Независимое консультирование для прогрессивных лидеров.
+              Независимый CFO-советник для руководителей, которым важно принимать финансовые решения уверенно.
             </p>
             {/* Social icons */}
             <div className="flex gap-3">
@@ -73,10 +72,20 @@ export function Footer() {
           <div>
             <h4 className="font-bold mb-5 text-sm uppercase tracking-wider" style={{ color: "#C9A96E" }}>Навигация</h4>
             <ul className="space-y-3 text-sm" style={{ color: "rgba(250,248,245,0.55)" }}>
-              <li><Link to="about" smooth={true} className="hover:text-amber-300 cursor-pointer transition-colors">Обо мне</Link></li>
-              <li><Link to="cases" smooth={true} className="hover:text-amber-300 cursor-pointer transition-colors">Кейсы</Link></li>
-              <li><Link to="method" smooth={true} className="hover:text-amber-300 cursor-pointer transition-colors">Методология</Link></li>
-              <li><Link to="contact" smooth={true} className="hover:text-amber-300 cursor-pointer transition-colors">Контакты</Link></li>
+              {[
+                { to: "personas", label: "С кем я работаю" },
+                { to: "method", label: "Методология" },
+                { to: "services", label: "Услуги" },
+                { to: "cases", label: "Кейсы" },
+                { to: "about", label: "Обо мне" },
+                { to: "contact", label: "Контакты" },
+              ].map((link) => (
+                <li key={link.to}>
+                  <Link to={link.to} smooth={true} className="hover:text-amber-300 cursor-pointer transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
               <li>
                 <a href="/privacy" className="hover:text-amber-300 transition-colors">
                   Политика конфиденциальности

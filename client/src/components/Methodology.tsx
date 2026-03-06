@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Layers, Target, LineChart } from "lucide-react";
+import { Link } from "react-scroll";
 
 export function Methodology() {
   return (
@@ -11,8 +12,7 @@ export function Methodology() {
               Моя философия
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Финансы — это не просто таблицы, это язык бизнес-стратегии. 
-              Мой подход устраняет разрыв между сложными данными и четким принятием решений.
+              Вы всегда знаете, на каком этапе идёт работа, что уже сделано и какой результат ожидать.
             </p>
 
             <div className="space-y-6">
@@ -73,6 +73,19 @@ export function Methodology() {
               <p className="text-sm text-muted-foreground uppercase tracking-wide">Лет управленческого опыта в финансах</p>
             </div>
           </motion.div>
+        </div>
+        <div className="mt-20 p-8 md:p-12 rounded-3xl text-center bg-[#0A1628] text-white relative overflow-hidden">
+          <div className="relative z-10 max-w-2xl mx-auto">
+            <h3 className="text-2xl md:text-3xl font-bold mb-6 font-serif">
+              Запишитесь на вводную сессию — разберём вашу ситуацию и определим первый шаг.
+            </h3>
+            <Link to="contact" smooth={true}>
+              <button className="px-8 py-4 rounded-full font-bold transition-all hover:-translate-y-1 shadow-lg"
+                style={{ background: "#C9A96E", color: "#0A1628" }}>
+                Обсудить вашу задачу
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

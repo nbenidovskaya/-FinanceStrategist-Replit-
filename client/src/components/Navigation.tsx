@@ -18,10 +18,11 @@ export function Navigation() {
   }, []);
 
   const navLinks = [
-    { name: "Услуги", to: "services" },
+    { name: "С кем я работаю", to: "personas" },
     { name: "Методология", to: "method" },
-    { name: "Обо мне", to: "about" },
+    { name: "Услуги", to: "services" },
     { name: "Кейсы", to: "cases" },
+    { name: "Обо мне", to: "about" },
     { name: "Контакты", to: "contact" },
   ];
 

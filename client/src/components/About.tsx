@@ -18,21 +18,14 @@ export function About() {
 
           <div className="relative z-10 grid md:grid-cols-[2fr,1fr] gap-12">
             <div>
-              <h2 className="text-3xl font-bold mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+              <h2 className="text-3xl font-bold mb-2" style={{ fontFamily: "'Playfair Display', serif", color: "#FAF8F5" }}>
                 Обо мне
               </h2>
               <div className="w-12 h-[2px] mb-6" style={{ background: "#C9A96E" }}></div>
 
-              {/* 
-                ИНСТРУКЦИЯ ПО ФОТО:
-                1. В Replit загрузите photo-about.jpg (фото в белом пиджаке) в папку public/
-                2. Раскомментируйте блок с фото ниже
-              */}
-              {/* 
               <div className="float-right ml-6 mb-4 w-32 h-40 rounded-xl overflow-hidden shadow-lg border border-white/10">
                 <img src="/photo-about.jpg" alt="Наталья Бенидовская" className="object-cover object-top w-full h-full" />
               </div>
-              */}
 
               <p className="text-lg leading-relaxed mb-5" style={{ color: "rgba(250,248,245,0.9)" }}>
                 Я — независимый CFO и стратегический ментор с более чем 15-летним опытом работы.
@@ -41,17 +34,14 @@ export function About() {
                 сопровождала сделки M&A, преодолевала кризисы и фазы взрывного роста.
               </p>
               <p className="leading-relaxed mb-8" style={{ color: "rgba(250,248,245,0.75)" }}>
-                Работала в Deloitte, Weatherford, Linde/Praxair, Гален и ГПБ Комплект — международных и российских компаниях с высочайшими
-                стандартами управления. Сегодня помогаю лидерам выстраивать финансовую функцию как
-                двигатель стратегического роста, а не как бэк-офис. Моя миссия — сделать высокоуровневую
-                финансовую экспертизу доступной для тех, кто принимает решения.
+                Карьерный путь строился с фундамента — учёт, контроль, внутренние процессы с ростом до финансового директора в компаниях с оборотом до 50+ млрд рублей. Работала в российском и международном бизнесе — в условиях санкций, M&A, кризисов и взрывного роста. Сегодня помогаю лидерам выстраивать финансовую функцию как двигатель стратегического роста.
               </p>
 
               <div className="grid grid-cols-2 gap-4">
                 {[
                   { icon: <Building2 className="w-4 h-4" />, text: "Deloitte · Linde · Weatherford" },
                   { icon: <GraduationCap className="w-4 h-4" />, text: "EMBA РАНХиГС / Kingston" },
-                  { icon: <BadgeCheck className="w-4 h-4" />, text: "ACCA · FCCA · IMA" },
+                  { icon: <BadgeCheck className="w-4 h-4" />, text: "ACCA" },
                   { icon: <BadgeCheck className="w-4 h-4" />, text: "Английский C1" },
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
@@ -59,6 +49,24 @@ export function About() {
                     <span className="text-sm font-medium" style={{ color: "rgba(250,248,245,0.85)" }}>{item.text}</span>
                   </div>
                 ))}
+              </div>
+              
+              <div className="mt-8 pt-8 border-t border-white/10">
+                <p className="text-xs uppercase tracking-wider mb-4" style={{ color: "rgba(250,248,245,0.5)" }}>Опыт работы в компаниях:</p>
+                <p className="text-sm font-medium mb-6" style={{ color: "rgba(250,248,245,0.85)" }}>
+                  Deloitte · Weatherford · Linde/Praxair · Гален · ГПБ Комплект
+                </p>
+                <div className="flex flex-wrap gap-6 items-center">
+                  {["deloitte", "weatherford", "linde", "galen", "gpb"].map((logo) => (
+                    <img 
+                      key={logo}
+                      src={`/logos/${logo}.png`} 
+                      alt={logo} 
+                      className="h-8 w-auto object-contain opacity-80" 
+                      style={{ filter: "brightness(0) invert(1)" }}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -68,7 +76,7 @@ export function About() {
               {[
                 { value: "15+", label: "Лет опыта CFO" },
                 { value: "50+", label: "млрд руб. — оборот под управлением" },
-                { value: "4", label: "Международные корпорации" },
+                { value: "", label: "Российский и международный бизнес" },
                 { value: "100%", label: "Реальные результаты" },
               ].map((stat, i) => (
                 <motion.div
@@ -79,9 +87,11 @@ export function About() {
                   transition={{ delay: i * 0.1 }}
                   className="text-left"
                 >
-                  <p className="text-4xl font-bold mb-1" style={{ color: "#C9A96E", fontFamily: "'Playfair Display', serif" }}>
-                    {stat.value}
-                  </p>
+                  {stat.value && (
+                    <p className="text-4xl font-bold mb-1" style={{ color: "#C9A96E", fontFamily: "'Playfair Display', serif" }}>
+                      {stat.value}
+                    </p>
+                  )}
                   <p className="text-xs uppercase tracking-wider" style={{ color: "rgba(250,248,245,0.5)" }}>
                     {stat.label}
                   </p>
