@@ -23,10 +23,6 @@ export function About() {
               </h2>
               <div className="w-12 h-[2px] mb-6" style={{ background: "#C9A96E" }}></div>
 
-              <div className="float-right ml-6 mb-4 w-32 h-40 rounded-xl overflow-hidden shadow-lg border border-white/10">
-                <img src="/photo-about.jpg" alt="Наталья Бенидовская" className="object-cover object-top w-full h-full" />
-              </div>
-
               <p className="text-lg leading-relaxed mb-5" style={{ color: "rgba(250,248,245,0.9)" }}>
                 Я — независимый CFO и стратегический ментор с более чем 15-летним опытом работы.
                 В роли финансового директора я управляла финансами компаний с{" "}
@@ -37,7 +33,7 @@ export function About() {
                 Карьерный путь строился с фундамента — учёт, контроль, внутренние процессы с ростом до финансового директора в компаниях с оборотом до 50+ млрд рублей. Работала в российском и международном бизнесе — в условиях санкций, M&A, кризисов и взрывного роста. Сегодня помогаю лидерам выстраивать финансовую функцию как двигатель стратегического роста.
               </p>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-4 mb-8">
                 {[
                   { icon: <Building2 className="w-4 h-4" />, text: "Deloitte · Linde · Weatherford" },
                   { icon: <GraduationCap className="w-4 h-4" />, text: "EMBA РАНХиГС / Kingston" },
@@ -52,17 +48,14 @@ export function About() {
               </div>
               
               <div className="mt-8 pt-8 border-t border-white/10">
-                <p className="text-xs uppercase tracking-wider mb-4" style={{ color: "rgba(250,248,245,0.5)" }}>Опыт работы в компаниях:</p>
-                <p className="text-sm font-medium mb-6" style={{ color: "rgba(250,248,245,0.85)" }}>
-                  Deloitte · Weatherford · Linde/Praxair · Гален · ГПБ Комплект
-                </p>
-                <div className="flex flex-wrap gap-6 items-center">
+                <p className="text-xs uppercase tracking-wider mb-6" style={{ color: "rgba(250,248,245,0.5)" }}>Опыт работы в компаниях:</p>
+                <div className="flex flex-wrap gap-x-10 gap-y-6 items-center">
                   {["deloitte", "weatherford", "linde", "galen", "gpb"].map((logo) => (
                     <img 
                       key={logo}
                       src={`/logos/${logo}.png`} 
                       alt={logo} 
-                      className="h-8 w-auto object-contain opacity-80" 
+                      className="h-7 w-auto object-contain opacity-90" 
                       style={{ filter: "brightness(0) invert(1)" }}
                     />
                   ))}
@@ -71,12 +64,24 @@ export function About() {
             </div>
 
             {/* Stats */}
-            <div className="flex flex-col justify-center gap-6 border-l pl-8 md:pl-12"
+            <div className="flex flex-col justify-start gap-10 border-l pl-8 md:pl-12"
               style={{ borderColor: "rgba(201,169,110,0.2)" }}>
+              
+              <div className="mb-4 w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-xl border border-white/10">
+                <img src="/photo-about.jpg" alt="Наталья Бенидовская" className="object-cover object-top w-full h-full" />
+              </div>
+
               {[
                 { value: "15+", label: "Лет опыта CFO" },
                 { value: "50+", label: "млрд руб. — оборот под управлением" },
-                { value: "", label: "Российский и международный бизнес" },
+                { 
+                  value: null, 
+                  label: (
+                    <span className="text-xs uppercase tracking-wider" style={{ color: "rgba(250,248,245,0.5)" }}>
+                      <span className="text-lg font-bold" style={{ color: "#C9A96E" }}>Р</span>оссийский и <span className="text-lg font-bold" style={{ color: "#C9A96E" }}>М</span>еждународный бизнес
+                    </span>
+                  ) 
+                },
                 { value: "100%", label: "Реальные результаты" },
               ].map((stat, i) => (
                 <motion.div
@@ -92,9 +97,13 @@ export function About() {
                       {stat.value}
                     </p>
                   )}
-                  <p className="text-xs uppercase tracking-wider" style={{ color: "rgba(250,248,245,0.5)" }}>
-                    {stat.label}
-                  </p>
+                  {typeof stat.label === 'string' ? (
+                    <p className="text-xs uppercase tracking-wider" style={{ color: "rgba(250,248,245,0.5)" }}>
+                      {stat.label}
+                    </p>
+                  ) : (
+                    stat.label
+                  )}
                 </motion.div>
               ))}
             </div>
