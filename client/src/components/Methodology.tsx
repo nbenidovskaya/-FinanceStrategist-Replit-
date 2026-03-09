@@ -1,92 +1,205 @@
 import { motion } from "framer-motion";
-import { Layers, Target, LineChart } from "lucide-react";
-import { Link } from "react-scroll";
+import { Search, Map, Wrench, RefreshCw } from "lucide-react";
+
+const steps = [
+  {
+    number: "01",
+    icon: Search,
+    title: "Диагностика",
+    duration: "1–2 недели",
+    description:
+      "Глубокий аудит финансовой функции: процессы, отчётность, команда, инструменты. Нахожу узкие места и скрытые резервы.",
+    deliverables: ["Карта текущего состояния", "Список quick wins", "Оценка зрелости финансов"],
+  },
+  {
+    number: "02",
+    icon: Map,
+    title: "Дорожная карта",
+    duration: "1–2 недели",
+    description:
+      "Формирую план с приоритетами, сроками и ожидаемым эффектом. Каждый шаг привязан к бизнес-результату.",
+    deliverables: ["План на 90 дней", "Целевые метрики", "Бюджет изменений"],
+  },
+  {
+    number: "03",
+    icon: Wrench,
+    title: "Внедрение",
+    duration: "1–3 месяца",
+    description:
+      "Работаю рядом с вашей командой: настраиваю процессы, строю модели, внедряю управленческую отчётность.",
+    deliverables: ["Новые процессы и регламенты", "Финансовые модели", "Обучение команды"],
+  },
+  {
+    number: "04",
+    icon: RefreshCw,
+    title: "Сопровождение",
+    duration: "по запросу",
+    description:
+      "Остаюсь на связи как внешний CFO или советник. Регулярные сессии, ревью результатов, корректировка курса.",
+    deliverables: ["Ежемесячные ревью", "Доступ для ad-hoc вопросов", "Квартальная стратсессия"],
+  },
+];
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.15 },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
 
 export function Methodology() {
   return (
-    <section id="method" className="section-padding bg-slate-50">
-      <div className="container-width">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary font-serif">
-              Моя философия
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Вы всегда знаете, на каком этапе идёт работа, что уже сделано и какой результат ожидать.
-            </p>
-
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-sm">
-                  <Layers className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">Сложное — просто</h3>
-                  <p className="text-muted-foreground">
-                    Говорим о сложных вещах понятным языком, уважая ваш интеллект и не скрываясь за терминами.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-sm">
-                  <Target className="w-6 h-6 text-accent" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">Ощутимые результаты</h3>
-                  <p className="text-muted-foreground">
-                    Каждое взаимодействие направлено на измеримый результат. Никаких пустых шагов. Фокус на ROI и создании ценности.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-sm">
-                  <LineChart className="w-6 h-6 text-secondary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">Стратегия на основе данных</h3>
-                  <p className="text-muted-foreground">
-                    Решения на базе фактов, а не интуиции. Мы строим системы, которые обеспечивают ясность и предсказуемость.
-                  </p>
-                </div>
-              </div>
-            </div>
+    <section id="method" className="py-24" style={{ background: "#FAF8F5" }}>
+      <div className="container mx-auto px-6 max-w-6xl">
+        {/* Header with image */}
+        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+          <div>
+            <motion.p
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4 }}
+              className="text-sm font-medium uppercase tracking-widest mb-4"
+              style={{ color: "#C9A96E" }}
+            >
+              Как я работаю
+            </motion.p>
+            <motion.h2
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-3xl md:text-4xl font-bold mb-6"
+              style={{ fontFamily: "'Playfair Display', serif", color: "#0A1628" }}
+            >
+              От диагностики до результата — прозрачный процесс на каждом шаге
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-lg leading-relaxed"
+              style={{ color: "#6B7280" }}
+            >
+              Вы всегда знаете, на каком этапе мы находимся, что уже сделано
+              и какой эффект ожидать дальше. Никаких чёрных ящиков.
+            </motion.p>
           </div>
 
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative"
+            className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3]"
           >
-            <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
-              {/* Minimalist abstract finance/architecture */}
-              <img 
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" 
-                alt="Architecture of Finance" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="absolute -bottom-6 -left-6 bg-white p-8 rounded-xl shadow-xl border border-slate-100 max-w-xs hidden md:block">
-              <p className="font-serif text-2xl font-bold text-primary mb-2">15+</p>
-              <p className="text-sm text-muted-foreground uppercase tracking-wide">Лет управленческого опыта в финансах</p>
-            </div>
+            <img
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
+              alt="Вид на город из окна офиса"
+              className="w-full h-full object-cover"
+            />
           </motion.div>
         </div>
-        <div className="mt-20 p-8 md:p-12 rounded-3xl text-center bg-[#0A1628] text-white relative overflow-hidden">
-          <div className="relative z-10 max-w-2xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6 font-serif">
-              Запишитесь на вводную сессию — разберём вашу ситуацию и определим первый шаг.
-            </h3>
-            <Link to="contact" smooth={true}>
-              <button className="px-8 py-4 rounded-full font-bold transition-all hover:-translate-y-1 shadow-lg"
-                style={{ background: "#C9A96E", color: "#0A1628" }}>
-                Обсудить вашу задачу
-              </button>
-            </Link>
-          </div>
-        </div>
+
+        {/* Steps grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          className="grid md:grid-cols-2 gap-6 lg:gap-8"
+        >
+          {steps.map((step) => {
+            const Icon = step.icon;
+            return (
+              <motion.div
+                key={step.number}
+                variants={cardVariants}
+                className="group relative bg-white rounded-2xl border p-8 hover:shadow-lg transition-all duration-300"
+                style={{ borderColor: "rgba(201,169,110,0.15)" }}
+              >
+                <span
+                  className="absolute top-6 right-8 text-7xl font-bold select-none pointer-events-none transition-colors duration-300"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: "rgba(10,22,40,0.04)",
+                  }}
+                >
+                  {step.number}
+                </span>
+
+                <div className="relative z-10 space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div
+                      className="w-10 h-10 rounded-lg flex items-center justify-center"
+                      style={{ background: "rgba(201,169,110,0.1)" }}
+                    >
+                      <Icon className="w-5 h-5" style={{ color: "#C9A96E" }} />
+                    </div>
+                    <h3
+                      className="text-xl font-bold"
+                      style={{ color: "#0A1628" }}
+                    >
+                      {step.title}
+                    </h3>
+                  </div>
+
+                  <span
+                    className="inline-block text-xs font-medium uppercase tracking-wide px-3 py-1 rounded-full"
+                    style={{
+                      color: "#C9A96E",
+                      background: "rgba(201,169,110,0.08)",
+                      border: "1px solid rgba(201,169,110,0.15)",
+                    }}
+                  >
+                    {step.duration}
+                  </span>
+
+                  <p style={{ color: "#6B7280" }} className="leading-relaxed">
+                    {step.description}
+                  </p>
+
+                  <div
+                    className="pt-4 border-t"
+                    style={{ borderColor: "rgba(201,169,110,0.1)" }}
+                  >
+                    <p
+                      className="text-xs font-medium uppercase tracking-wide mb-2"
+                      style={{ color: "#9CA3AF" }}
+                    >
+                      Что вы получаете
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {step.deliverables.map((item) => (
+                        <span
+                          key={item}
+                          className="text-sm px-3 py-1 rounded-md"
+                          style={{
+                            color: "#0A1628",
+                            background: "rgba(10,22,40,0.03)",
+                            border: "1px solid rgba(10,22,40,0.06)",
+                          }}
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
       </div>
     </section>
   );
