@@ -96,9 +96,9 @@ export function Cases() {
               />
 
               {/* Tag */}
-              <div className="text-center mb-3" style={{ minHeight: "36px" }}>
+              <div className="text-center mb-3" style={{ minHeight: "48px" }}>
                 <p
-                  className="text-xs font-medium uppercase tracking-wider"
+                  className="text-sm font-semibold uppercase tracking-wider"
                   style={{ color: "#C9A96E" }}
                 >
                   {item.category}
@@ -109,8 +109,8 @@ export function Cases() {
 
               {/* Title */}
               <h3
-                className="text-2xl font-bold text-center mb-5"
-                style={{ fontFamily: "'Playfair Display', serif", color: "#0A1628", minHeight: "80px" }}
+                className="text-lg font-bold text-center mb-5"
+                style={{ fontFamily: "'Playfair Display', serif", color: "#0A1628", minHeight: "56px" }}
               >
                 {item.title}
               </h3>
