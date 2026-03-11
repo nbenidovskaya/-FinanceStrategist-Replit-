@@ -96,7 +96,7 @@ export function Cases() {
               />
 
               {/* Tag */}
-              <div className="text-center mb-3" style={{ minHeight: "48px" }}>
+              <div className="text-center mb-5 pb-5" style={{ minHeight: "48px", borderBottom: "1px solid rgba(201,169,110,0.2)" }}>
                 <p
                   className="text-sm font-semibold uppercase tracking-wider"
                   style={{ color: "#C9A96E" }}
