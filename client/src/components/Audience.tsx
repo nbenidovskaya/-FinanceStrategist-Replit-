@@ -102,14 +102,14 @@ export function Audience() {
 
                 {/* Subtitle — centered */}
                 <p
-                  className="text-xs font-medium uppercase tracking-wide text-center mb-6"
+                  className="text-xs font-medium uppercase tracking-wide text-center mb-6 w-full"
                   style={{ color: "#C9A96E" }}
                 >
                   {item.subtitle}
                 </p>
 
                 {/* Challenge */}
-                <div className="mb-3" style={{ minHeight: "90px" }}>
+                <div className="mb-3 w-full" style={{ minHeight: "90px" }}>
                   <p
                     className="text-xs font-bold uppercase tracking-wider mb-2"
                     style={{ color: "#9CA3AF" }}
@@ -123,7 +123,7 @@ export function Audience() {
 
                 {/* Goal */}
                 <div
-                  className="mt-auto pt-5 border-t"
+                  className="mt-auto pt-5 border-t w-full"
                   style={{ borderColor: "rgba(201,169,110,0.12)" }}
                 >
                   <p
