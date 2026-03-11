@@ -18,7 +18,7 @@ export function Navigation() {
   }, []);
 
   const navLinks = [
-    { name: "С кем я работаю", to: "personas" },
+    { name: "С кем я работаю", to: "audience" },
     { name: "Методология", to: "method" },
     { name: "Услуги", to: "services" },
     { name: "Кейсы", to: "cases" },
@@ -55,6 +55,7 @@ export function Navigation() {
               to={link.to}
               smooth={true}
               duration={500}
+              offset={-80}
               className="text-sm font-medium cursor-pointer transition-colors"
               style={{ color: isScrolled ? "rgba(250,248,245,0.75)" : "rgba(10,22,40,0.7)" }}
             >
@@ -89,6 +90,7 @@ export function Navigation() {
               to={link.to}
               smooth={true}
               duration={500}
+              offset={-80}
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-lg font-medium py-2 cursor-pointer"
               style={{ color: "rgba(250,248,245,0.85)" }}

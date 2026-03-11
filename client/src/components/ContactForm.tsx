@@ -1,10 +1,17 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Mail, Send, Linkedin, Phone } from "lucide-react";
+import { Mail, Send, Linkedin, Phone, Copy, Check } from "lucide-react";
 
-  export function ContactForm() {
+export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText("nbenidovskaya@yandex.ru");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -83,12 +90,9 @@ import { Mail, Send, Linkedin, Phone } from "lucide-react";
 
               <div className="space-y-5">
                 {/* Email */}
-                <a
-                  href="mailto:nbenidovskaya@yandex.ru"
-                  className="flex items-center gap-4 group"
-                >
+                <div className="flex items-center gap-4">
                   <div
-                    className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-all group-hover:-translate-y-0.5"
+                    className="w-10 h-10 rounded-full flex items-center justify-center shrink-0"
                     style={{
                       background: "rgba(201,169,110,0.1)",
                       border: "1px solid rgba(201,169,110,0.2)",
@@ -96,7 +100,7 @@ import { Mail, Send, Linkedin, Phone } from "lucide-react";
                   >
                     <Mail className="w-4 h-4" style={{ color: "#C9A96E" }} />
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <p
                       className="text-xs uppercase tracking-wider mb-1"
                       style={{ color: "rgba(250,248,245,0.4)" }}
@@ -104,13 +108,28 @@ import { Mail, Send, Linkedin, Phone } from "lucide-react";
                       Email
                     </p>
                     <p
-                      className="text-sm font-medium group-hover:underline"
+                      className="text-sm font-medium"
                       style={{ color: "rgba(250,248,245,0.85)" }}
                     >
                       nbenidovskaya@yandex.ru
                     </p>
                   </div>
-                </a>
+                  <button
+                    onClick={copyEmail}
+                    className="w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all hover:-translate-y-0.5"
+                    style={{
+                      background: "rgba(201,169,110,0.1)",
+                      border: "1px solid rgba(201,169,110,0.2)",
+                    }}
+                    title={copied ? "Скопировано!" : "Скопировать"}
+                  >
+                    {copied ? (
+                      <Check className="w-3.5 h-3.5" style={{ color: "#4ade80" }} />
+                    ) : (
+                      <Copy className="w-3.5 h-3.5" style={{ color: "#C9A96E" }} />
+                    )}
+                  </button>
+                </div>
 
                 {/* Telegram */}
                 <a
