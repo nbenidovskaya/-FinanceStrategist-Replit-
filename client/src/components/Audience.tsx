@@ -82,18 +82,18 @@ export function Audience() {
                 className="bg-white rounded-2xl p-8 flex flex-col"
                 style={{ border: "1px solid rgba(201,169,110,0.12)" }}
               >
-                {/* Icon */}
-                <div className="text-center mb-5">
+                {/* Icon - centered */}
+                <div className="flex justify-center mb-5">
                   <div
-                    className="w-12 h-12 rounded-xl inline-flex items-center justify-center"
+                    className="w-12 h-12 rounded-xl flex items-center justify-center"
                     style={{ background: "rgba(10,22,40,0.05)" }}
                   >
                     <Icon className="w-5 h-5" style={{ color: "#0A1628" }} />
                   </div>
                 </div>
 
-                {/* Title — fixed height box, same as Cases approach */}
-                <div className="text-center mb-2" style={{ minHeight: "60px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                {/* Title — fixed height box, centered */}
+                <div className="flex items-center justify-center text-center mb-2" style={{ height: "72px" }}>
                   <h3
                     className="text-xl font-bold"
                     style={{ fontFamily: "'Playfair Display', serif", color: "#0A1628" }}
@@ -102,8 +102,8 @@ export function Audience() {
                   </h3>
                 </div>
 
-                {/* Subtitle */}
-                <div className="text-center mb-6" style={{ minHeight: "28px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                {/* Subtitle — fixed height, centered, aligned with middle column */}
+                <div className="flex items-center justify-center text-center mb-6" style={{ height: "32px" }}>
                   <p
                     className="text-xs font-medium uppercase tracking-wide"
                     style={{ color: "#C9A96E" }}
