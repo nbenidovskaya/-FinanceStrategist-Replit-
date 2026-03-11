@@ -49,13 +49,22 @@ export function Navigation() {
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
+          <Link
+            to="audience"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className="text-sm font-medium cursor-pointer transition-colors"
+            style={{ color: isScrolled ? "rgba(250,248,245,0.75)" : "rgba(10,22,40,0.7)" }}
+          >
+            С кем я работаю
+          </Link>
+          {navLinks.slice(1).map((link) => (
             <Link
               key={link.name}
               to={link.to}
               smooth={true}
               duration={500}
-              offset={link.to === "audience" ? -80 : 0}
               className="text-sm font-medium cursor-pointer transition-colors"
               style={{ color: isScrolled ? "rgba(250,248,245,0.75)" : "rgba(10,22,40,0.7)" }}
             >
@@ -84,13 +93,23 @@ export function Navigation() {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 border-t p-4 shadow-xl flex flex-col gap-4"
           style={{ background: "#0A1628", borderColor: "rgba(201,169,110,0.2)" }}>
-          {navLinks.map((link) => (
+          <Link
+            to="audience"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="text-lg font-medium py-2 cursor-pointer"
+            style={{ color: "rgba(250,248,245,0.85)" }}
+          >
+            С кем я работаю
+          </Link>
+          {navLinks.slice(1).map((link) => (
             <Link
               key={link.name}
               to={link.to}
               smooth={true}
               duration={500}
-              offset={link.to === "audience" ? -80 : 0}
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-lg font-medium py-2 cursor-pointer"
               style={{ color: "rgba(250,248,245,0.85)" }}
