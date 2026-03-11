@@ -55,7 +55,7 @@ export function Navigation() {
               to={link.to}
               smooth={true}
               duration={500}
-              offset={-80}
+              offset={link.to === "audience" ? -80 : 0}
               className="text-sm font-medium cursor-pointer transition-colors"
               style={{ color: isScrolled ? "rgba(250,248,245,0.75)" : "rgba(10,22,40,0.7)" }}
             >
@@ -90,7 +90,7 @@ export function Navigation() {
               to={link.to}
               smooth={true}
               duration={500}
-              offset={-80}
+              offset={link.to === "audience" ? -80 : 0}
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-lg font-medium py-2 cursor-pointer"
               style={{ color: "rgba(250,248,245,0.85)" }}
