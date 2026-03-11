@@ -83,7 +83,7 @@ export function Audience() {
                 style={{ border: "1px solid rgba(201,169,110,0.12)" }}
               >
                 {/* Icon - centered */}
-                <div className="w-full flex items-center justify-center mb-5">
+                <div style={{ width: "100%", display: "flex", justifyContent: "center", alignItems: "center", marginBottom: "20px" }}>
                   <div
                     className="w-12 h-12 rounded-xl flex items-center justify-center"
                     style={{ background: "rgba(10,22,40,0.05)" }}
@@ -92,21 +92,25 @@ export function Audience() {
                   </div>
                 </div>
 
-                {/* Title — centered */}
-                <h3
-                  className="text-xl font-bold text-center mb-4 w-full"
-                  style={{ fontFamily: "'Playfair Display', serif", color: "#0A1628" }}
-                >
-                  {item.title}
-                </h3>
+                {/* Title — centered, fixed height */}
+                <div className="w-full mb-1" style={{ minHeight: "64px" }}>
+                  <h3
+                    className="text-xl font-bold text-center"
+                    style={{ fontFamily: "'Playfair Display', serif", color: "#0A1628" }}
+                  >
+                    {item.title}
+                  </h3>
+                </div>
 
-                {/* Subtitle — centered */}
-                <p
-                  className="text-xs font-medium uppercase tracking-wide text-center mb-6 w-full"
-                  style={{ color: "#C9A96E" }}
-                >
-                  {item.subtitle}
-                </p>
+                {/* Subtitle — centered, fixed height */}
+                <div className="w-full mb-4" style={{ minHeight: "20px" }}>
+                  <p
+                    className="text-xs font-medium uppercase tracking-wide text-center"
+                    style={{ color: "#C9A96E" }}
+                  >
+                    {item.subtitle}
+                  </p>
+                </div>
 
                 {/* Challenge */}
                 <div className="mb-3 w-full" style={{ minHeight: "90px" }}>
