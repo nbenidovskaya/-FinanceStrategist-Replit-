@@ -83,7 +83,7 @@ export function Audience() {
                 style={{ border: "1px solid rgba(201,169,110,0.12)" }}
               >
                 {/* Icon - centered */}
-                <div className="flex justify-center mb-5">
+                <div className="w-full flex items-center justify-center mb-5">
                   <div
                     className="w-12 h-12 rounded-xl flex items-center justify-center"
                     style={{ background: "rgba(10,22,40,0.05)" }}
@@ -92,25 +92,21 @@ export function Audience() {
                   </div>
                 </div>
 
-                {/* Title — fixed height box, centered */}
-                <div className="flex items-center justify-center text-center mb-2" style={{ height: "72px" }}>
-                  <h3
-                    className="text-xl font-bold"
-                    style={{ fontFamily: "'Playfair Display', serif", color: "#0A1628" }}
-                  >
-                    {item.title}
-                  </h3>
-                </div>
+                {/* Title — centered */}
+                <h3
+                  className="text-xl font-bold text-center mb-4"
+                  style={{ fontFamily: "'Playfair Display', serif", color: "#0A1628" }}
+                >
+                  {item.title}
+                </h3>
 
-                {/* Subtitle — fixed height, centered, aligned with middle column */}
-                <div className="flex items-center justify-center text-center mb-6" style={{ height: "32px" }}>
-                  <p
-                    className="text-xs font-medium uppercase tracking-wide"
-                    style={{ color: "#C9A96E" }}
-                  >
-                    {item.subtitle}
-                  </p>
-                </div>
+                {/* Subtitle — centered */}
+                <p
+                  className="text-xs font-medium uppercase tracking-wide text-center mb-6"
+                  style={{ color: "#C9A96E" }}
+                >
+                  {item.subtitle}
+                </p>
 
                 {/* Challenge */}
                 <div className="mb-3" style={{ minHeight: "90px" }}>
