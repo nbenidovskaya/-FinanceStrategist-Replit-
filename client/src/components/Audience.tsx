@@ -79,7 +79,7 @@ export function Audience() {
               <motion.div
                 key={item.title}
                 variants={cardVariants}
-                className="bg-white rounded-2xl p-8 flex flex-col"
+                className="bg-white rounded-2xl p-8 flex flex-col items-center"
                 style={{ border: "1px solid rgba(201,169,110,0.12)" }}
               >
                 {/* Icon - centered */}
@@ -94,7 +94,7 @@ export function Audience() {
 
                 {/* Title — centered */}
                 <h3
-                  className="text-xl font-bold text-center mb-4"
+                  className="text-xl font-bold text-center mb-4 w-full"
                   style={{ fontFamily: "'Playfair Display', serif", color: "#0A1628" }}
                 >
                   {item.title}
