@@ -109,8 +109,8 @@ export function Cases() {
 
               {/* Title */}
               <h3
-                className="text-lg font-bold text-center mb-5"
-                style={{ fontFamily: "'Playfair Display', serif", color: "#0A1628", minHeight: "56px" }}
+                className="text-2xl font-bold text-center mb-5"
+                style={{ fontFamily: "'Playfair Display', serif", color: "#0A1628", minHeight: "80px" }}
               >
                 {item.title}
               </h3>
