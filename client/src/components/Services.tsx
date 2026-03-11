@@ -9,7 +9,7 @@ const services = [
       "Точечное погружение в задачу: от диагностики до результата.",
     price: "от 150 000 ₽ / проект",
     image:
-      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6e?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop",
     features: [
       "Due Diligence и финансовый аудит",
       "Оптимизация финансовой функции",
@@ -37,14 +37,14 @@ const services = [
     subtitle: "Постоянный советник",
     description:
       "Стратегический партнёр на регулярной основе — рядом, когда нужно.",
-    price: "от 200 000 ₽ / месяц",
+    price: "от 300 000 ₽ / месяц",
     image:
-      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=800&auto=format&fit=crop",
     features: [
       "Ежемесячные стратегические обзоры",
       "Участие в советах директоров",
       "Мониторинг финансового состояния компании",
-      "Консультации по запросу (unlimited)",
+      "Консультации по запросу",
     ],
   },
 ];
@@ -67,7 +67,7 @@ const cardVariants = {
 
 export function Services() {
   return (
-    <section id="services" className="py-24" style={{ background: "#0A1628" }}>
+    <section id="services" className="py-24" style={{ background: "#122240" }}>
       <div className="container mx-auto px-6 max-w-6xl">
         {/* Header */}
         <div className="text-center mb-16">

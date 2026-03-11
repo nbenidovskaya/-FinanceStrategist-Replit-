@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 
 const cases = [
   {
-    tag: "Антикризисное управление · Гален, 2022",
+    category: "Антикризисное управление",
+    company: "Гален, 2022",
     title: "Ликвидность сохранена в условиях санкционного шока",
     context:
       "Группа компаний — крупный дистрибьютор медоборудования и реагентов для IVD диагностики. Оборот ~15 млрд руб. В 2022 году разрыв цепи поставок из Европы, США и Великобритании поставил бизнес под угрозу.",
@@ -12,7 +13,8 @@ const cases = [
       "Поставки сохранены. Кассовых разрывов не допущено. Бизнес продолжил работу без потери ключевых контрактов.",
   },
   {
-    tag: "Менторство · Частный клиент",
+    category: "Менторство",
+    company: "Частный клиент",
     title: "CEO перестал зависеть от финансового директора",
     context:
       "Владелец бизнеса с глубокой отраслевой экспертизой — но без понимания финансовой отчётности. Запрос: научиться управлять бизнесом через финансы, а не вокруг них.",
@@ -22,7 +24,8 @@ const cases = [
       "Руководитель самостоятельно читает P&L, контролирует маржинальность и управляет ликвидностью. Скорость принятия решений выросла кратно.",
   },
   {
-    tag: "Операционная трансформация · Linde/Praxair",
+    category: "Операционная трансформация",
+    company: "Linde/Praxair",
     title: "Два бизнеса. Одна команда. Без потерь в эффективности.",
     context:
       "Структурная трансформация объединённой компании — производителя промышленных газов на территории России и Казахстана. 20+ производственных площадок, оборот ~30 млрд руб.",
@@ -70,7 +73,7 @@ export function Cases() {
           </p>
         </div>
 
-        {/* Cards */}
+        {/* Cards with subgrid for cross-column alignment */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -82,27 +85,38 @@ export function Cases() {
             <motion.div
               key={item.title}
               variants={cardVariants}
-              className="bg-white rounded-2xl p-8 flex flex-col"
+              className="group bg-white rounded-2xl p-8 flex flex-col relative overflow-hidden
+                         hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-default"
               style={{ border: "1px solid rgba(201,169,110,0.12)" }}
             >
-              {/* Tag */}
-              <p
-                className="text-xs font-medium uppercase tracking-wider mb-4"
-                style={{ color: "#C9A96E" }}
-              >
-                {item.tag}
-              </p>
+              {/* Gold top line on hover */}
+              <div
+                className="absolute top-0 left-0 right-0 h-[3px] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+                style={{ background: "linear-gradient(90deg, #C9A96E, #B8944F)" }}
+              />
 
-              {/* Title - fixed min-height for alignment */}
+              {/* Tag */}
+              <div className="text-center mb-3" style={{ minHeight: "36px" }}>
+                <p
+                  className="text-xs font-medium uppercase tracking-wider"
+                  style={{ color: "#C9A96E" }}
+                >
+                  {item.category}
+                  <br />
+                  {item.company}
+                </p>
+              </div>
+
+              {/* Title */}
               <h3
-                className="text-lg font-bold mb-6 min-h-[3.5rem]"
-                style={{ fontFamily: "'Playfair Display', serif", color: "#0A1628" }}
+                className="text-lg font-bold text-center mb-5"
+                style={{ fontFamily: "'Playfair Display', serif", color: "#0A1628", minHeight: "56px" }}
               >
                 {item.title}
               </h3>
 
               {/* Context */}
-              <div className="mb-5">
+              <div className="mb-3" style={{ minHeight: "185px" }}>
                 <p
                   className="text-sm font-bold mb-2"
                   style={{ color: "#0A1628" }}
@@ -115,7 +129,7 @@ export function Cases() {
               </div>
 
               {/* Actions */}
-              <div className="mb-5">
+              <div className="mb-3" style={{ minHeight: "140px" }}>
                 <p
                   className="text-sm font-bold mb-2"
                   style={{ color: "#0A1628" }}
@@ -127,7 +141,7 @@ export function Cases() {
                 </p>
               </div>
 
-              {/* Result - pushed to bottom */}
+              {/* Result */}
               <div
                 className="mt-auto pt-5 border-t"
                 style={{ borderColor: "rgba(201,169,110,0.12)" }}

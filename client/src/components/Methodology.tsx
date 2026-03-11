@@ -68,7 +68,7 @@ export function Methodology() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4 }}
-              className="text-sm font-medium uppercase tracking-widest mb-4"
+              className="text-base md:text-lg font-semibold uppercase tracking-widest mb-4"
               style={{ color: "#C9A96E" }}
             >
               Как я работаю
@@ -104,8 +104,8 @@ export function Methodology() {
             className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3]"
           >
             <img
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
-              alt="Вид на город из окна офиса"
+              src="/method-photo.jpg"
+              alt="Современный офис"
               className="w-full h-full object-cover"
             />
           </motion.div>
@@ -125,11 +125,14 @@ export function Methodology() {
               <motion.div
                 key={step.number}
                 variants={cardVariants}
-                className="group relative bg-white rounded-2xl border p-8 hover:shadow-lg transition-all duration-300"
+                className="group relative bg-white rounded-2xl border p-8
+                           hover:shadow-lg transition-all duration-300"
                 style={{ borderColor: "rgba(201,169,110,0.15)" }}
               >
+                {/* Step number watermark */}
                 <span
-                  className="absolute top-6 right-8 text-7xl font-bold select-none pointer-events-none transition-colors duration-300"
+                  className="absolute top-6 right-8 text-7xl font-bold select-none pointer-events-none
+                             transition-colors duration-300"
                   style={{
                     fontFamily: "'Playfair Display', serif",
                     color: "rgba(10,22,40,0.04)",
