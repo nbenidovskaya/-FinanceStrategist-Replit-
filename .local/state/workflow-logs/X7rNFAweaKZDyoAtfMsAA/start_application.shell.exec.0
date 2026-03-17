@@ -1,0 +1,15 @@
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+[1G[0K12:25:20 PM [express] serving on port 5000
+[2m12:25:21 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/pages/PublicOffer" from "client/src/App.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/client/src/App.tsx[39m:3:24
+[33m  17 |  import { Switch, Route } from "wouter";
+  18 |  import PrivacyPolicy from "@/pages/PrivacyPolicy";
+  19 |  import PublicOffer from "@/pages/PublicOffer";
+     |                           ^
+  20 |  import { queryClient } from "./lib/queryClient";
+  21 |  import { QueryClientProvider } from "@tanstack/react-query";[39m
+[1G[0K⠙[1G[0K

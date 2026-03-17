@@ -5,8 +5,7 @@ const services = [
   {
     title: "Консалтинг",
     subtitle: "Проектная работа",
-    description:
-      "Точечное погружение в задачу: от диагностики до результата.",
+    description: "Точечное погружение в задачу: от диагностики до результата.",
     price: "от 150 000 ₽ / проект",
     image:
       "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop",
@@ -39,7 +38,8 @@ const services = [
       "Стратегический партнёр на регулярной основе — рядом, когда нужно.",
     price: "от 300 000 ₽ / месяц",
     image:
-      "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop",
+    imageOpacity: 0.75,
     features: [
       "Ежемесячные стратегические обзоры",
       "Участие в советах директоров",
@@ -73,7 +73,10 @@ export function Services() {
         <div className="text-center mb-16">
           <h2
             className="text-3xl md:text-4xl font-bold mb-4"
-            style={{ fontFamily: "'Playfair Display', serif", color: "#FAF8F5" }}
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              color: "#FAF8F5",
+            }}
           >
             Форматы работы
           </h2>
@@ -110,6 +113,7 @@ export function Services() {
                   src={service.image}
                   alt={service.title}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  style={{ opacity: service.imageOpacity || 1 }}
                 />
               </div>
 
@@ -117,7 +121,10 @@ export function Services() {
               <div className="p-6 flex flex-col flex-1">
                 <h3
                   className="text-xl font-bold mb-1"
-                  style={{ fontFamily: "'Playfair Display', serif", color: "#FAF8F5" }}
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: "#FAF8F5",
+                  }}
                 >
                   {service.title}
                 </h3>

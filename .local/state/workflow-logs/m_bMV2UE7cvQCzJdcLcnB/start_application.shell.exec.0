@@ -1,0 +1,15 @@
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+[1G[0K12:52:17 PM [express] serving on port 5000
+[2m12:52:19 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "react-router-dom" from "client/src/pages/PrivacyPolicy.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/client/src/pages/PrivacyPolicy.tsx[39m:2:21
+[33m  15 |    window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+  16 |  }
+  17 |  import { Link } from "react-router-dom";
+     |                        ^
+  18 |  const PrivacyPolicy = () => {
+  19 |    return /* @__PURE__ */ jsxDEV("div", { "data-replit-metadata": "client/src/pages/PrivacyPolicy.tsx:6:4", "data-comp...[39m
+[1G[0K⠙[1G[0K
