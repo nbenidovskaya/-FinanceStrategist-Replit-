@@ -1,6 +1,0 @@
-{
-  "buildCommand": "cd client && vite build",
-  "outputDirectory": "client/dist",
-  "devCommand": "cd client && vite",
-  "installCommand": "npm install --legacy-peer-deps && cd client && npm install"
-}
