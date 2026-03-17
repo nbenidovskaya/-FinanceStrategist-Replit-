@@ -10,7 +10,7 @@ const personas = [
     problem:
       "Финансы остаются «чёрным ящиком». Сложно связать цифры со стратегией и реальным ростом.",
     goal: "Принимать решения уверенно. Увеличить стоимость бизнеса и масштабироваться без потери контроля.",
-    color: "#0A1628",
+    color: "#122240",
   },
   {
     id: "cfo",
@@ -20,7 +20,7 @@ const personas = [
     problem:
       "Операционка поглотила. Не хватает стратегического веса и влияния в компании.",
     goal: "Трансформировать финансовую функцию и стать стратегическим партнёром для бизнеса.",
-    color: "#1B3A6B",
+    color: "#122240",
   },
   {
     id: "transition",
@@ -30,13 +30,13 @@ const personas = [
     problem:
       "Богатый опыт в смежной области, но нет системного понимания корпоративных финансов.",
     goal: "Освоить финансовый язык бизнеса и применить накопленный опыт на новом уровне.",
-    color: "#3A3A4A",
+    color: "#122240",
   },
 ];
 
 export function Personas() {
   return (
-    <section className="section-padding" style={{ background: "#FFFFFF" }}>
+    <section id="audience" className="pt-20 pb-24" style={{ background: "#FFFFFF" }}>
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2
@@ -61,7 +61,6 @@ export function Personas() {
           {personas.map((persona, index) => (
             <motion.div
               key={persona.id}
-              id={persona.id === "ceo" ? "personas" : undefined}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

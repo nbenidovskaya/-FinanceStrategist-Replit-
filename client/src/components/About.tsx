@@ -3,7 +3,7 @@ import { GraduationCap, BadgeCheck } from "lucide-react";
 
 export function About() {
   return (
-    <section id="about" className="py-24" style={{ background: "#0A1628" }}>
+    <section id="about" className="pt-16 pb-24" style={{ background: "#0A1628" }}>
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="relative">
           {/* Decorative gold line */}
@@ -36,15 +36,15 @@ export function About() {
                 <div className="flex items-baseline gap-4 mb-8">
                   <p
                     className="text-5xl font-bold"
-                    style={{ fontFamily: "'Playfair Display', serif", color: "#C9A96E" }}
+                    style={{ fontFamily: "'Playfair Display', serif", color: "#C9A96E", lineHeight: "1" }}
                   >
-                    20+
+                    20<span style={{ fontSize: "0.55em", verticalAlign: "super", lineHeight: "0" }}>+</span>
                   </p>
                   <p
-                    className="text-lg leading-snug"
+                    className="text-lg"
                     style={{ color: "rgba(250,248,245,0.85)" }}
                   >
-                    лет управления финансами<br />и экономикой бизнеса
+                    лет управления финансами и экономикой бизнеса
                   </p>
                 </div>
 
@@ -73,11 +73,12 @@ export function About() {
                   className="leading-relaxed mb-10"
                   style={{ color: "rgba(250,248,245,0.65)" }}
                 >
-                  Карьерный путь строился с фундамента — учёт, контроль,
-                  внутренние процессы. Работала в российском и международном
-                  бизнесе — в условиях санкций, трансформаций и стремительного
-                  масштабирования. Сегодня помогаю лидерам выстраивать
-                  финансовую функцию как двигатель стратегического роста.
+                  Карьерный путь начинался с базы — учёт, контроль,
+                  внутренние процессы. Работала в российском
+                  и международном бизнесе — в условиях санкций,
+                  трансформаций и стремительного масштабирования.
+                  Сегодня помогаю лидерам выстраивать финансовую
+                  функцию как двигатель стратегического роста.
                 </p>
 
               </div>
@@ -121,7 +122,7 @@ export function About() {
             </div>
 
             {/* Logos row */}
-            <div className="mt-12 pt-8 border-t" style={{ borderColor: "rgba(201,169,110,0.1)" }}>
+            <div className="mt-6 pt-6 border-t" style={{ borderColor: "rgba(201,169,110,0.1)" }}>
               <p
                 className="text-xs uppercase tracking-wider mb-6"
                 style={{ color: "rgba(250,248,245,0.4)" }}
@@ -131,12 +132,11 @@ export function About() {
               <div className="flex flex-wrap gap-x-12 gap-y-6 items-center">
                 {[
                   { name: "deloitte", h: 24 },
-                  { name: "weatherford", h: 46 },
-                  { name: "praxair", h: 20 },
-                  { name: "linde", h: 46 },
-                  { name: "Galen", h: 64 },
-                  { name: "gpb", h: 64 },
-              
+                  { name: "weatherford", h: 34 },
+                  { name: "linde", h: 40 },
+                  { name: "Galen", h: 34 },
+                  { name: "gpb", h: 34 },
+                  { name: "praxair", h: 26 },
                 ].map((logo) => (
                     <img
                       key={logo.name}

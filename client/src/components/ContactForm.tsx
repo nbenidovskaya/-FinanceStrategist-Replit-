@@ -73,7 +73,7 @@ export function ContactForm() {
             {/* Contact card */}
             <div
               className="rounded-2xl p-8 text-white"
-              style={{ background: "#0A1628" }}
+              style={{ background: "#0A1628", paddingTop: "40px" }}
             >
               <h3
                 className="text-xl font-bold mb-2"
@@ -197,16 +197,15 @@ export function ContactForm() {
               </div>
             </div>
 
-            {/* Extra note */}
+            {/* Extra note - prominent CTA */}
             <div
               className="rounded-2xl p-6"
               style={{
-                background: "rgba(201,169,110,0.06)",
-                border: "1px solid rgba(201,169,110,0.12)",
+                background: "linear-gradient(135deg, #C9A96E, #B8944F)",
               }}
             >
-              <p className="text-sm leading-relaxed" style={{ color: "#6B7280" }}>
-                <span className="font-semibold" style={{ color: "#0A1628" }}>
+              <p className="text-sm leading-relaxed font-medium" style={{ color: "#0A1628" }}>
+                <span className="font-bold text-base">
                   Вводная сессия — бесплатно.
                 </span>{" "}
                 30 минут, без обязательств. Разберём вашу ситуацию и определим,
@@ -364,6 +363,45 @@ export function ContactForm() {
                       color: "#0A1628",
                     }}
                   />
+                </div>
+
+                {/* Privacy consent checkbox */}
+                <div className="flex items-start gap-3 mb-6">
+                  <input
+                    type="checkbox"
+                    name="consent"
+                    id="consent"
+                    required
+                    className="mt-1 shrink-0"
+                    style={{ accentColor: "#C9A96E", width: "16px", height: "16px" }}
+                  />
+                  <label
+                    htmlFor="consent"
+                    className="text-xs leading-relaxed"
+                    style={{ color: "#6B7280" }}
+                  >
+                    Я принимаю условия{" "}
+                    <a
+                      href="/offer"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline"
+                      style={{ color: "#C9A96E" }}
+                    >
+                      Публичной оферты
+                    </a>{" "}
+                    и даю согласие на обработку персональных данных
+                    в соответствии с{" "}
+                    <a
+                      href="/privacy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline"
+                      style={{ color: "#C9A96E" }}
+                    >
+                      Политикой конфиденциальности
+                    </a>
+                  </label>
                 </div>
 
                 {/* Submit */}

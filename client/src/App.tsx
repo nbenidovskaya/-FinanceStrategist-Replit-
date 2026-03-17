@@ -1,22 +1,22 @@
 import { Switch, Route } from "wouter";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import PublicOffer from "@/pages/PublicOffer";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import LandingPage from "@/pages/LandingPage";
-
 function Router() {
   return (
     <Switch>
       <Route path="/privacy" component={PrivacyPolicy} />
+      <Route path="/offer" component={PublicOffer} />
       <Route path="/" component={LandingPage} />
       <Route component={NotFound} />
     </Switch>
   );
 }
-
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
@@ -27,5 +27,4 @@ function App() {
     </QueryClientProvider>
   );
 }
-
 export default App;

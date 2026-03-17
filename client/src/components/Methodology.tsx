@@ -104,8 +104,8 @@ export function Methodology() {
             className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3]"
           >
             <img
-              src="/method-photo.jpg"
-              alt="Современный офис"
+              src="/method-photo.png"
+              alt="Как я работаю — финансовая стратегия"
               className="w-full h-full object-cover"
             />
           </motion.div>
@@ -168,7 +168,7 @@ export function Methodology() {
                     {step.duration}
                   </span>
 
-                  <p style={{ color: "#6B7280" }} className="leading-relaxed">
+                  <p style={{ color: "#6B7280", minHeight: "72px" }} className="leading-relaxed">
                     {step.description}
                   </p>
 

@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
-      style={{ background: "#FAF8F5" }}>
+      style={{ background: "#FAF8F5", paddingBottom: "120px" }}>
       {/* Subtle dot pattern */}
       <div className="absolute inset-0 z-0 opacity-[0.07]"
         style={{ backgroundImage: "radial-gradient(#0A1628 1px, transparent 1px)", backgroundSize: "20px 20px" }}>
@@ -33,14 +33,20 @@ export function Hero() {
 
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"
             style={{ color: "#0A1628", fontFamily: "'Playfair Display', serif" }}>
-            Финансы, которые работают на стратегию — а не против неё.{" "}
+            Финансы, которые работают
+            на стратегию — а не против неё.
+            <br />
             <span className="italic" style={{ color: "#C9A96E" }}>
-              Опыт CFO изнутри. Взгляд советника снаружи.
+              Опыт CFO изнутри.
+              <br />
+              Взгляд советника снаружи.
             </span>
           </h1>
 
           <p className="text-lg md:text-xl leading-relaxed max-w-xl" style={{ color: "#4A4A5A" }}>
-            15+ лет опыта в роли CFO в международных и российских компаниях с оборотом до 50+ млрд рублей. Помогаю лидерам принимать финансовые решения с уверенностью.
+            15+ лет опыта в роли CFO в международных и российских компаниях
+            с оборотом до 50+ млрд рублей. Помогаю лидерам принимать
+            финансовые решения с уверенностью.
           </p>
 
           {/* Credential badges */}
@@ -77,12 +83,6 @@ export function Hero() {
           className="relative"
         >
           <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl relative">
-            {/* 
-              ИНСТРУКЦИЯ ПО ФОТО:
-              1. В Replit откройте папку public/
-              2. Загрузите файл photo-hero.jpg (фото в тёмно-синем пиджаке, руки скрещены)
-              3. Замените src ниже на /photo-hero.jpg
-            */}
             <img
               src="/photo-hero.jpg"
               alt="Наталья Бенидовская — независимый CFO и стратегический ментор"
@@ -97,7 +97,8 @@ export function Hero() {
               <div className="p-5"
                 style={{ borderLeft: "1px solid #C9A96E", paddingLeft: "16px", background: "none", border: "none" }}>
                 <p className="text-base" style={{ color: "#C9A96E", fontFamily: "'Playfair Display', serif" }}>
-                  "Финансовый директор должен быть там, где принимаются решения — а не там, где они объясняются."
+                  "Финансовый директор должен быть там, где принимаются решения —
+                  а не там, где они объясняются."
                 </p>
               </div>
             </div>

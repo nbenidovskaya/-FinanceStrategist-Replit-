@@ -14,11 +14,11 @@ export default function LandingPage() {
       <Navigation />
       <main>
         <Hero />
+        <Personas />
         <Services />
         <Methodology />
-        <About />
         <Cases />
-        <Personas />
+        <About />
         <ContactForm />
       </main>
       <Footer />

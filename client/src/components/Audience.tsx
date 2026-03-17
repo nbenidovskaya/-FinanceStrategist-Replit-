@@ -79,41 +79,41 @@ export function Audience() {
               <motion.div
                 key={item.title}
                 variants={cardVariants}
-                className="bg-white rounded-2xl p-8 flex flex-col items-center"
+                className="bg-white rounded-2xl p-8 flex flex-col"
                 style={{ border: "1px solid rgba(201,169,110,0.12)" }}
               >
-                {/* Icon - centered */}
-                <div style={{ width: "100%", display: "flex", justifyContent: "center", alignItems: "center", marginBottom: "20px" }}>
+                {/* Icon */}
+                <div style={{ textAlign: "center", marginBottom: "20px" }}>
                   <div
-                    className="w-12 h-12 rounded-xl flex items-center justify-center"
-                    style={{ background: "rgba(10,22,40,0.05)" }}
+                    className="w-12 h-12 rounded-xl inline-flex items-center justify-center"
+                    style={{ background: "#122240" }}
                   >
-                    <Icon className="w-5 h-5" style={{ color: "#0A1628" }} />
+                    <Icon className="w-5 h-5" style={{ color: "#FAF8F5" }} />
                   </div>
                 </div>
 
-                {/* Title — centered, fixed height */}
-                <div className="w-full mb-1" style={{ minHeight: "64px" }}>
+                {/* Title — fixed height box */}
+                <div style={{ textAlign: "center", marginBottom: "4px", minHeight: "76px" }}>
                   <h3
-                    className="text-xl font-bold text-center"
-                    style={{ fontFamily: "'Playfair Display', serif", color: "#0A1628" }}
+                    className="text-xl font-bold"
+                    style={{ fontFamily: "'Playfair Display', serif", color: "#0A1628", textAlign: "center" }}
                   >
                     {item.title}
                   </h3>
                 </div>
 
-                {/* Subtitle — centered, fixed height */}
-                <div className="w-full mb-4" style={{ minHeight: "20px" }}>
+                {/* Subtitle */}
+                <div style={{ textAlign: "center", marginBottom: "16px", minHeight: "20px" }}>
                   <p
-                    className="text-xs font-medium uppercase tracking-wide text-center"
-                    style={{ color: "#C9A96E" }}
+                    className="text-xs font-medium uppercase tracking-wide"
+                    style={{ color: "#C9A96E", textAlign: "center" }}
                   >
                     {item.subtitle}
                   </p>
                 </div>
 
                 {/* Challenge */}
-                <div className="mb-3 w-full" style={{ minHeight: "90px" }}>
+                <div className="mb-3" style={{ minHeight: "100px" }}>
                   <p
                     className="text-xs font-bold uppercase tracking-wider mb-2"
                     style={{ color: "#9CA3AF" }}
@@ -127,7 +127,7 @@ export function Audience() {
 
                 {/* Goal */}
                 <div
-                  className="mt-auto pt-5 border-t w-full"
+                  className="mt-auto pt-5 border-t"
                   style={{ borderColor: "rgba(201,169,110,0.12)" }}
                 >
                   <p

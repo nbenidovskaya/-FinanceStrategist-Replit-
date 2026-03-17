@@ -24,8 +24,8 @@ const socialLinks = [
 
 const navLinks = [
   { to: "audience", label: "С кем я работаю" },
-  { to: "method", label: "Методология" },
   { to: "services", label: "Услуги" },
+  { to: "method", label: "Методология" },
   { to: "cases", label: "Кейсы" },
   { to: "about", label: "Обо мне" },
   { to: "contact", label: "Контакты" },
@@ -33,7 +33,7 @@ const navLinks = [
 
 export function Footer() {
   return (
-    <footer className="py-16 border-t" style={{ background: "#0A1628", borderColor: "rgba(201,169,110,0.15)" }}>
+    <footer className="pt-8 pb-16 border-t" style={{ background: "#0A1628", borderColor: "rgba(201,169,110,0.15)" }}>
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
@@ -91,6 +91,7 @@ export function Footer() {
                   <Link
                     to={to}
                     smooth
+                    offset={-30}
                     className="hover:text-amber-300 cursor-pointer transition-colors"
                   >
                     {label}
@@ -100,6 +101,11 @@ export function Footer() {
               <li>
                 <a href="/privacy" className="hover:text-amber-300 transition-colors">
                   Политика конфиденциальности
+                </a>
+              </li>
+              <li>
+                <a href="/offer" className="hover:text-amber-300 transition-colors">
+                  Публичная оферта
                 </a>
               </li>
             </ul>
