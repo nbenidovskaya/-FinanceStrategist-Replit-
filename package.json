@@ -1,8 +1,9 @@
 {
   "name": "finance-strategist",
   "version": "1.0.0",
-  "scripts": {
-    "build": "cd client && npx vite build"
+"scripts": {
+    "build": "npx vite build"
+},
   },
   "devDependencies": {
     "@types/node": "^20.17.24",
